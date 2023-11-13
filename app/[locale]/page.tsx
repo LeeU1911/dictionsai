@@ -1,20 +1,19 @@
-// app/pages/index.tsx
-
 import React from 'react';
+import {useTranslations} from 'next-intl';
 
 const LandingPage: React.FC = () => {
+  const t = useTranslations('Index')
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <h1 className="text-4xl font-bold text-blue-600 mb-4">
-        Accelerate your English learning.
+        {t('greeting')}
       </h1>
       <p className="text-xl text-gray-800 mb-8">
-        From months to hours.
+        {t('subtext')}
       </p>
       <p className="text-lg text-gray-600 mb-12">
-        Start your language journey with dictionsai - the personalized language learning experience.
+        <strong>dictionsai</strong> {t('startJourney')}
       </p>
-      {/* Add more sections, features, or CTAs as needed */}
     </div>
   );
 };
